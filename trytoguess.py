@@ -6,7 +6,7 @@ max = int(input("the max number you want to play with, is:"))
 secret = random.randint(min,max)
 
 
-guess = 0
+guess = None
 
 while guess != secret:
     input_text = input(f"Hallo {name},now try to guess the secret number (between {min} and {max}): ")
