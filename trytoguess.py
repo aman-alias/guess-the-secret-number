@@ -23,7 +23,6 @@ while guess != secret:
 # TODO: read file "hiscore.txt", get current highscore
 
 # TODO: say "you are better than last time" if highscore improved
-print(f"It took you {tries} tries.")
 
 # TODO: save current number of attempts to file "hiscore.txt" if better than highscore
 hiscore = open("hiscore.txt", "r")
@@ -35,9 +34,7 @@ elif content > tries :
     hiscore = open("hiscore.txt", "w")
     hiscore.write(f"{tries}")
     hiscore.close()
-    hiscore = open("hiscore.txt", "r")
-    content = int(hiscore.read())
-    hiscore.close()
+    content = tries
     print(f" you have a new highscore, it had taken only {content} tries")
 else :
     print(f"you did not reach the old highscore, it was only {content} tries but you took {tries} tries ")
